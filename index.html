@@ -10,7 +10,7 @@
     </head>
     
 	<body>
-        <div id="txt2">表示されている村井に近づいてください</div>
+        <div id="txt2">画像表示されている場所に近づいてください</div>
         <div id="mapDiv"></div>
         <img id="getImg" src="" hidden>
         <canvas id="cap" width="300" height="60"></canvas>
@@ -102,7 +102,7 @@
             for(var i =0;i< RU.length;i++){
                 var pos =  new google.maps.LatLng(RU[i].lat, RU[i].lng);
                 distance[i] =google.maps.geometry.spherical.computeDistanceBetween(myPos, pos);
-                if(distance[i]<50 && captured[i] === false){
+                if(distance[i]<15 && captured[i] === false){
                     captured[i] = true;
                     getImg.src = RU[i].img;
                     var x=i*60;
@@ -118,7 +118,7 @@
                     mapDiv.hidden = true;
                     getImg.addEventListener("click",() => {
                         getImg.hidden = true;
-                        txt2.innerHTML = "表示されている村井に近づいてください";
+                        txt2.innerHTML = "画像表示されている場所に近づいてください";
                         mapDiv.hidden = false;
                     });
                 }
