@@ -102,7 +102,7 @@
             for(var i =0;i< RU.length;i++){
                 var pos =  new google.maps.LatLng(RU[i].lat, RU[i].lng);
                 distance[i] =google.maps.geometry.spherical.computeDistanceBetween(myPos, pos);
-                if(distance[i]<15 && captured[i] === false){
+                if(distance[i]<25 && captured[i] === false){
                     captured[i] = true;
                     getImg.src = RU[i].img;
                     var x=i*60;
