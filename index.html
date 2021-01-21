@@ -10,11 +10,12 @@
     </head>
     
 	<body>
-	<script>
+        <script>
             'use swtrict';
-            window.alert('ながらスマホはおやめください。障害物にご注意ください。');
+            window.alert('注意！:ながらスマホはおやめください。障害物にご注意ください。');
+            window.alert('ゲームについて:施設との距離が近づきますと自動的に画像が表示されますので画面の指示に従ってください。');
         </script>
-        <div id="txt2">画像表示されている場所に近づいてください</div>
+        <div id="txt2">画像表示されている施設に近づいてください</div>
         <div id="mapDiv"></div>
         <img id="getImg" src="" hidden>
         <canvas id="cap" width="300" height="60"></canvas>
@@ -122,7 +123,7 @@
                     mapDiv.hidden = true;
                     getImg.addEventListener("click",() => {
                         getImg.hidden = true;
-                        txt2.innerHTML = "画像表示されている場所に近づいてください";
+                        txt2.innerHTML = "表示されている施設に近づいてください";
                         mapDiv.hidden = false;
                     });
                 }
